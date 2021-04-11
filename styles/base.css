@@ -26,18 +26,18 @@ footer a {
   color: #fff;
 }
 
-.footer_ohmyfoodLogo {
+.footer__ohmyfood-logo {
   width: fit-content;
   height: fit-content;
   margin-bottom: 20px;
 }
-.footer_ohmyfoodLogo img {
+.footer__ohmyfood-logo img {
   width: 98px;
   height: 18px;
   filter: invert(1);
 }
 
-.suggestLogo, .partneringLogo {
+.footer__suggest-logo, .footer__partnering-logo {
   width: 11px;
   height: 1em;
   margin-right: 11px;

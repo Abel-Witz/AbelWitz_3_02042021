@@ -29,7 +29,7 @@ footer {
     }
 }
 
-.footer_ohmyfoodLogo {
+.footer__ohmyfood-logo {
     width: fit-content;
     height: fit-content;
     margin-bottom: 20px;
@@ -42,7 +42,7 @@ footer {
     }
 }
 
-.suggestLogo {
+.footer__suggest-logo {
     width: 11px;
     height: 1em;
     margin-right: 11px;
@@ -50,6 +50,6 @@ footer {
     filter: invert(1);
 }
 
-.partneringLogo {
-    @extend .suggestLogo;
+.footer__partnering-logo {
+    @extend .footer__suggest-logo;
 }

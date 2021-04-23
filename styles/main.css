@@ -290,35 +290,26 @@ footer a {
 }
 
 @keyframes heart-fill {
-  0% {
-    color: white;
-    background-size: 100% 0%;
+  from {
+    color: #f6f6f6;
+    font-weight: 900;
   }
-  50% {
-    background-size: 100% 60%;
-  }
-  100% {
-    font-weight: 1000;
-    color: transparent;
-    background-size: 100% 100%;
-    animation-timing-function: ease-out;
+  to {
+    color: #9356DC;
+    font-weight: 900;
   }
 }
 .fa-heart {
   font-size: 22px;
-  background-clip: text;
-  -webkit-background-clip: text;
   font-weight: 500;
   border-radius: 10px;
   position: absolute;
   right: 14px;
   bottom: 14px;
-  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
-  background-position: bottom;
-  background-repeat: no-repeat;
+  color: black;
 }
 .fa-heart:hover {
-  animation: heart-fill 300ms forwards linear;
+  animation: heart-fill 500ms forwards ease-in;
 }
 @media only screen and (max-width: 1200px) {
   .fa-heart {

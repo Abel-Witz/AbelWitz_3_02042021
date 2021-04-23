@@ -232,19 +232,13 @@ $distance-between-tile-border-and-text: 39px;
 }
 
 @keyframes heart-fill {
-    0% {
-        color: white;
-        background-size: 100% 0%;
+    from {
+        color: $color-light-gray;
+        font-weight: 900;
     }
-    50% {
-        background-size: 100% 60%
-    }
-    100% {
-        font-weight: 1000;
-        color: transparent;
-        background-size: 100% 100%;
-
-        animation-timing-function: ease-out;
+    to {
+        color: $color-primary;
+        font-weight: 900;
     }
 }
 
@@ -253,20 +247,16 @@ $bottom-right-margin: 14px;
 
 .fa-heart {
     font-size: 22px;
-    background-clip: text;
-    -webkit-background-clip: text;
     font-weight: 500;
     border-radius: 10px;
     position: absolute;
     right: $bottom-right-margin;
     bottom: $bottom-right-margin;
 
-    background-image: linear-gradient(to top right, $color-secondary, $color-primary);
-    background-position: bottom;
-    background-repeat: no-repeat;
+    color: black;
 
     &:hover {
-        animation: heart-fill 300ms forwards linear;
+        animation: heart-fill 500ms forwards ease-in;
     }
 
     @media only screen and (max-width: 1200px) { /* For tablets we want to add padding to the heart to make sure the user don't miss the click */

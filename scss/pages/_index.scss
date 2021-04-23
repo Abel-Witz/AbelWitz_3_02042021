@@ -194,19 +194,19 @@ $distance-between-tile-border-and-text: 39px;
     }
 
     &-1 {
-        background-image: url("/images/restaurants/la_palette_du_gout.jpg");
+        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_palette_du_gout.jpg");
     }
 
     &-2 {
-        background-image: url("/images/restaurants/la_note_enchantee.jpg");
+        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_note_enchantee.jpg");
     }
 
     &-3 {
-        background-image: url("/images/restaurants/a_la_francaise.jpg");
+        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/a_la_francaise.jpg");
     }
 
     &-4 {
-        background-image: url("/images/restaurants/le_delice_des_sens.jpg");
+        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/le_delice_des_sens.jpg");
     }
 }
 
@@ -248,15 +248,18 @@ $distance-between-tile-border-and-text: 39px;
     }
 }
 
+$heart-size: 22px;
+$bottom-right-margin: 14px;
+
 .fa-heart {
     font-size: 22px;
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: 500;
-
+    border-radius: 10px;
     position: absolute;
-    right: 14px;
-    bottom: 14px;
+    right: $bottom-right-margin;
+    bottom: $bottom-right-margin;
 
     background-image: linear-gradient(to top right, $color-secondary, $color-primary);
     background-position: bottom;
@@ -264,5 +267,11 @@ $distance-between-tile-border-and-text: 39px;
 
     &:hover {
         animation: heart-fill 300ms forwards linear;
+    }
+
+    @media only screen and (max-width: 1200px) { /* For tablets we want to add padding to the heart to make sure the user don't miss the click */
+        right: 0;
+        bottom: 0;
+        padding: $bottom-right-margin;
     }
 }

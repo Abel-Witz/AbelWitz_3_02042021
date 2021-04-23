@@ -1,0 +1,18 @@
+.button {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 20px 22px;
+    border: none;
+    color: #fff;
+    transition: all 100ms;
+    font-size: medium;
+    font-weight: $font-weight-medium / 2;
+    text-decoration: none;
+    @include button-background-color;
+    @include box-shadow;
+
+    &:hover {
+        @include button-background-color($hovered: true);
+        @include box-shadow($hovered: true);
+    }
+}

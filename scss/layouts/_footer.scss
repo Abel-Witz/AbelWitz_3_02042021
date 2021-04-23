@@ -1,0 +1,43 @@
+footer {
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 37px;
+    background: $color-dark-gray;
+
+    a {
+        display: block;
+        margin: 0.5em;
+        text-decoration: none;
+        color: #fff;
+        font-weight: $font-weight-medium / 2;
+    }
+}
+
+.footer__ohmyfood-logo {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+
+    img {
+        width: 98px;
+        height: 18px;
+        filter: invert(1);
+    }
+}
+
+%footer-icon {
+    height: 1em;
+    filter: invert(1);
+}
+
+.footer__suggest-icon {
+    width: 11px;
+    margin-right: 12px;
+    @extend %footer-icon;
+}
+
+.footer__partnering-icon {
+    width: 12px;
+    margin-right: 11px;
+    @extend %footer-icon;
+}

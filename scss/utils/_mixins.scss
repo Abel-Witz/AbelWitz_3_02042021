@@ -1,0 +1,23 @@
+@mixin box-shadow($hovered: false) {
+    $shadow-alpha: null;
+
+    @if ($hovered) {
+        $shadow-alpha: 0.15;
+    } @else {
+        $shadow-alpha: 0.2;
+    }
+
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, $shadow-alpha);
+}
+
+@mixin button-background-color($hovered: false) {
+    $first-gradiant-color: $color-secondary;
+    $second-gradiant-color: $color-primary;
+
+    @if ($hovered) {
+        $first-gradiant-color: lighten($first-gradiant-color, 3%);
+        $second-gradiant-color: lighten($second-gradiant-color, 3%);
+    }
+
+    background: linear-gradient(to bottom right, $first-gradiant-color, $second-gradiant-color);
+}

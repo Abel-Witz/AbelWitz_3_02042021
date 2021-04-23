@@ -202,30 +202,34 @@ footer a {
   margin: 0;
 }
 
-.section-restaurants__restaurant-tile-group {
+.section-restaurants__restaurant-grid {
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 28px;
 }
 
-.section-restaurants__restaurant-tile-link {
-  text-decoration: none;
-  color: #000;
+.section-restaurants__restaurant {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
-.section-restaurants__restaurant-tile-link:not(:first-child) {
+.section-restaurants__restaurant:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.section-restaurants__restaurant:not(:first-child) {
   margin-top: 18px;
 }
 
 .section-restaurants__restaurant-tile {
-  border-radius: 10px;
-  overflow: hidden;
-  padding-bottom: 19px;
-  transition: all 200ms ease-in-out;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: #000;
 }
-.section-restaurants__restaurant-tile:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+
+.section-restaurants__restaurant-tile-content {
+  padding-bottom: 19px;
 }
 
 .section-restaurants__restaurant-tile-image {
@@ -253,16 +257,36 @@ footer a {
   box-shadow: 0px 0px 1px #99E2D0;
 }
 .section-restaurants__restaurant-tile-image-1 {
-  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("/images/restaurants/la_palette_du_gout.jpg");
 }
 .section-restaurants__restaurant-tile-image-2 {
-  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("/images/restaurants/la_note_enchantee.jpg");
 }
 .section-restaurants__restaurant-tile-image-3 {
-  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("/images/restaurants/a_la_francaise.jpg");
 }
 .section-restaurants__restaurant-tile-image-4 {
-  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("/images/restaurants/le_delice_des_sens.jpg");
+}
+
+.section-restaurants__restaurant-tile-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+  margin-left: 14px;
+  margin-right: 24px;
+  margin-bottom: 7px;
+}
+.section-restaurants__restaurant-tile-title h3 {
+  font-size: large;
+  margin: 0;
+}
+
+.section-restaurants__restaurant-tile-paragraph {
+  font-weight: 200;
+  margin-top: 0px;
+  margin-left: 14px;
+  margin-bottom: 0px;
 }
 
 @keyframes heart-fill {
@@ -280,36 +304,20 @@ footer a {
     animation-timing-function: ease-out;
   }
 }
-.section-restaurants__restaurant-tile-title {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 19px;
-  margin-left: 14px;
-  margin-right: 24px;
-  margin-bottom: 7px;
-}
-.section-restaurants__restaurant-tile-title h3 {
-  font-size: large;
-  margin: 0;
-}
-.section-restaurants__restaurant-tile-title .fa-heart {
+.fa-heart {
   font-size: 22px;
   background-clip: text;
   -webkit-background-clip: text;
   font-weight: 500;
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
   background-image: linear-gradient(to top right, #FF79DA, #9356DC);
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.section-restaurants__restaurant-tile-title .fa-heart:hover {
+.fa-heart:hover {
   animation: heart-fill 300ms forwards linear;
-}
-
-.section-restaurants__restaurant-tile-paragraph {
-  font-weight: 200;
-  margin-top: 0px;
-  margin-left: 14px;
-  margin-bottom: 0px;
 }
 
 /*# sourceMappingURL=main.css.map */

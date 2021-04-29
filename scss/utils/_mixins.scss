@@ -2,9 +2,9 @@
     $shadow-alpha: null;
 
     @if ($hovered) {
-        $shadow-alpha: 0.15;
+        $shadow-alpha: 0.10;
     } @else {
-        $shadow-alpha: 0.2;
+        $shadow-alpha: 0.15;
     }
 
     box-shadow: 0px 10px 10px rgba(0, 0, 0, $shadow-alpha);
@@ -20,4 +20,20 @@
     }
 
     background: linear-gradient(to bottom right, $first-gradiant-color, $second-gradiant-color);
+}
+
+@mixin background-la-palette-du-gout {
+    background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_palette_du_gout.jpg");
+}
+
+@mixin background-la-note-enchantee {
+    background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_note_enchantee.jpg");
+}
+
+@mixin background-a-la-francaise {
+    background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/a_la_francaise.jpg");
+}
+
+@mixin background-le-delice-des-sens {
+    background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/le_delice_des_sens.jpg");
 }

@@ -20,6 +20,10 @@
     padding-top: 43px;
     padding-bottom: 57px;
     text-align: center;
+    
+    .button {
+        margin: 0 auto;
+    }
 }
 
 .discover-restaurants__title {
@@ -28,7 +32,7 @@
 }
 
 .discover-restaurants__paragraph {
-    font-weight: $font-weight-medium / 4;
+    font-weight: $font-weight-medium / 2;
     color: lighten(#000, 30%);
     margin-top: 25px;
     margin-bottom: 31px;
@@ -141,9 +145,12 @@ $distance-between-tile-border-and-text: 39px;
     margin-top: 28px;
 }
 
+
+$heart-margin: 14px;
+
 .section-restaurants__restaurant {
     position: relative;
-    border-radius: 10px;
+    border-radius: $restaurant-tile-border-radius;
     overflow: hidden;
     transition: all 200ms ease-in-out;
     @include box-shadow;
@@ -155,6 +162,19 @@ $distance-between-tile-border-and-text: 39px;
 
     &:not(:first-child) {
         margin-top: 18px;
+    }
+
+    .heart-button {
+        position: absolute;
+        right: $heart-margin;
+        bottom: $heart-margin;
+    
+        @media only screen and (max-width: 1200px) { /* For tablets we want to add padding to the heart to make sure the user don't miss the click */
+            right: 0;
+            bottom: 0;
+            padding: $heart-margin;
+            border-radius: 0px 0px $restaurant-tile-border-radius 0px;
+        }
     }
 }
 
@@ -194,74 +214,31 @@ $distance-between-tile-border-and-text: 39px;
     }
 
     &-1 {
-        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_palette_du_gout.jpg");
+        @include background-la-palette-du-gout;
     }
 
     &-2 {
-        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_note_enchantee.jpg");
+        @include background-la-note-enchantee;
     }
 
     &-3 {
-        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/a_la_francaise.jpg");
+        @include background-a-la-francaise;
     }
 
     &-4 {
-        background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/le_delice_des_sens.jpg");
+        @include background-le-delice-des-sens;
     }
 }
 
 .section-restaurants__restaurant-tile-title {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 19px;
-    margin-left: 14px;
-    margin-right: 24px;
-    margin-bottom: 7px;
-
-    h3 {
-        font-size: large;
-        margin: 0;
-    }
+    font-size: medium;
+    font-weight: $font-weight-medium * 2;
+    margin: 19px 24px 7px 14px;
 }
 
 .section-restaurants__restaurant-tile-paragraph {
-    font-weight: $font-weight-medium / 4;
+    font-weight: $font-weight-medium / 2;
     margin-top: 0px;
     margin-left: 14px;
     margin-bottom: 0px;
-}
-
-@keyframes heart-fill {
-    from {
-        color: $color-light-gray;
-        font-weight: 900;
-    }
-    to {
-        color: $color-primary;
-        font-weight: 900;
-    }
-}
-
-$heart-size: 22px;
-$bottom-right-margin: 14px;
-
-.fa-heart {
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 10px;
-    position: absolute;
-    right: $bottom-right-margin;
-    bottom: $bottom-right-margin;
-
-    color: black;
-
-    &:hover {
-        animation: heart-fill 500ms forwards ease-in;
-    }
-
-    @media only screen and (max-width: 1200px) { /* For tablets we want to add padding to the heart to make sure the user don't miss the click */
-        right: 0;
-        bottom: 0;
-        padding: $bottom-right-margin;
-    }
 }

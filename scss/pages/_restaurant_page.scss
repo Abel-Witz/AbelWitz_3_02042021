@@ -1,0 +1,205 @@
+.presentation-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+
+    &-a-la-francaise {
+        @include background-a-la-francaise;
+    }
+
+    &-la-note-enchantee {
+        @include background-la-note-enchantee;
+    }
+
+    &-le-delice-des-sens {
+        @include background-le-delice-des-sens;
+    }
+
+    &-la-palette-du-gout {
+        @include background-la-palette-du-gout;
+    }
+}
+
+@keyframes tile-appear {
+    from {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.restaurant-menu {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: -38px;
+    padding-top: 38px;
+    padding-bottom: 83px;
+    border-radius: 38px 38px 0px 0px;
+    background-color: $color-light-gray;
+
+    .restaurant-menu__title {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            height: initial;
+            margin: 0px auto 0px 19px;
+            font-family: Shrikhand;
+            font-size: 29px;
+            font-weight: 500;
+            white-space: nowrap;
+
+            @media only screen and (max-width: 340px) { /* Lowers font size to make sure it fully appears on smaller screens */
+                font-size: 23px;
+            }
+        }
+
+        .spacer {
+            max-width: 38px;
+            width: 100%;
+        }
+    }
+
+    .restaurant-menu__category-title {
+        margin: 38px 0px 23px 20px;
+        font-weight: $font-weight-medium / 2;
+        font-size: medium;
+        position: relative;
+    }
+        
+    .restaurant-menu__category-title::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        position: absolute;
+        bottom: -8px;
+        background-color: $color-tertiary;
+    }
+
+    .restaurant-menu__choice-group {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 14px 47px 14px;
+    }
+
+    .restaurant-menu__choice-link {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .restaurant-menu__choice {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        background-color: #FFF;
+        border-radius: $restaurant-tile-border-radius;
+        transition: padding-right 1s, box-shadow 200ms ease-in-out;
+
+        padding-right: 0px;
+        @include box-shadow;
+
+        &:hover {
+            padding-right: 59px;
+            @include box-shadow($hovered: true);
+        }
+
+        &:hover .tick-mark {
+            min-width: 59px;
+        }
+
+        &:hover .tick-mark__icon {
+            transform: translateY(-50%) rotate(1turn);
+        }
+
+        @for $i from 1 through 4 {
+            &-#{$i} {
+                animation: tile-appear 500ms ($i - 1)*200ms backwards ease-in-out;
+            }
+        }
+
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+    }
+
+    .restaurant-menu__choice-content {
+        width: 100%;
+        padding: 10px 0px 10px 10px;
+    }
+
+    .restaurant-menu__choice-title {
+        width: fit-content;
+        margin: 0px 0px 10px 0px;
+        font-size: medium;
+        font-weight: $font-weight-medium * 2;
+
+        @media only screen and (max-width: 375px) { /* Lowers font size to make sure it fully appears on smaller screens */
+            font-size: small;
+        }
+    }
+
+    .restaurant-menu__choice-subtitle {
+        font-weight: $font-weight-medium;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .restaurant-menu__choice-subtitle-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media only screen and (min-width: 309px) and (max-width: 375px) { /* Lowers font size to make sure it fully appears on smaller screens */
+            font-size: 12px;
+        }
+
+        @media only screen and (max-width: 308px) { /* Lowers font size to make sure it fully appears on smaller screens */
+            font-size: 10px;
+        }
+    }
+
+    .restaurant-menu__choice-subtitle-price {
+        margin-left: 10px;
+        margin-right: 23px;
+        font-weight: $font-weight-medium * 2;
+        position: relative;
+
+        @media only screen and (min-width: 309px) and (max-width: 375px) { /* Lowers font size to make sure it fully appears on smaller screens */
+            font-size: 13px;
+        }
+
+        @media only screen and (max-width: 308px) { /* Lowers font size to make sure it fully appears on smaller screens */
+            font-size: 11px;
+        }
+    }
+
+    .button {
+        margin: 0 auto;
+    }
+
+    .tick-mark {
+        min-width: 0px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background-color: $color-tertiary;
+        transition: min-width 500ms ease-in-out;
+    }
+
+    .tick-mark__icon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 19px;
+        filter: invert(1);
+        transform: translateY(-50%) rotate(0deg);
+        transition: transform 550ms ease-out;
+    }
+}

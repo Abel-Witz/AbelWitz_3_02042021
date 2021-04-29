@@ -1,0 +1,21 @@
+
+@keyframes heart-fill {
+    from {
+        color: $color-light-gray;
+        font-weight: 900;
+    }
+    to {
+        color: $color-primary;
+        font-weight: 900;
+    }
+}
+
+.heart-button {
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+
+    &:hover {
+        animation: heart-fill 500ms forwards ease-in;
+    }
+}

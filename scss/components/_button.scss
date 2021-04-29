@@ -1,12 +1,13 @@
 .button {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     border-radius: 25px;
     padding: 20px 22px;
     border: none;
     color: #fff;
     transition: all 100ms;
     font-size: medium;
-    font-weight: $font-weight-medium / 2;
+    font-weight: $font-weight-medium;
     text-decoration: none;
     @include button-background-color;
     @include box-shadow;

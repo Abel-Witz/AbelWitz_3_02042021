@@ -1,28 +1,23 @@
 footer {
     padding-left: 25px;
-    padding-top: 20px;
+    padding-top: 26px;
     padding-bottom: 37px;
     background: $color-dark-gray;
 
     a {
         display: block;
-        margin: 0.5em;
+        margin-bottom: 0.5em;
         text-decoration: none;
         color: #fff;
-        font-weight: $font-weight-medium / 2;
+        font-weight: $font-weight-medium;
     }
 }
 
 .footer__ohmyfood-logo {
-    width: fit-content;
-    height: fit-content;
+    width: 98px;
+    height: 18px;
     margin-bottom: 20px;
-
-    img {
-        width: 98px;
-        height: 18px;
-        filter: invert(1);
-    }
+    filter: invert(1);
 }
 
 %footer-icon {

@@ -19,6 +19,24 @@
     &-la-palette-du-gout {
         @include background-la-palette-du-gout;
     }
+
+    $iterations: 6;
+
+    @for $i from 1 through $iterations {
+        $min-width: 325px + (125px * $i);
+        $max-width: 450px + (125px * $i) - 1;
+        $height: 220px + 20px*$i;
+
+        @if ($i < $iterations) {
+            @media only screen and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+                height: $height;
+            };
+        } @else {
+            @media only screen and (min-width: #{$min-width}) {
+                height: $height;
+            };
+        };
+    };
 }
 
 @keyframes tile-appear {
@@ -65,11 +83,22 @@
         }
     }
 
+    .restaurant-menu__category {
+        margin: 0 auto;
+        max-width: 472px;
+    }
+
     .restaurant-menu__category-title {
+        width: fit-content;
         margin: 38px 0px 23px 20px;
         font-weight: $font-weight-medium / 2;
         font-size: medium;
         position: relative;
+
+        @media only screen and (min-width: 500px) {
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
     }
         
     .restaurant-menu__category-title::after {
@@ -180,7 +209,8 @@
     }
 
     .button {
-        margin: 0 auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 
     .tick-mark {

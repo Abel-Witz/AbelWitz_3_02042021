@@ -51,16 +51,20 @@
 }
 
 .section-functioning__step-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
     margin-top: 28px;
+
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .section-functioning__step {
     position: relative;
     padding-left: 12px;
-
-    &:not(:first-child) {
-        margin-top: 25px;
-    }
 
     &:last-child {
         .section-functioning__step-tile {
@@ -94,6 +98,7 @@ $step-number-circle-diameter: 24px;
     font-size: medium;
     width: 100%;
     height: 72px;
+    padding-right: 10px;
     border-radius: 18px;
     @include box-shadow;
 }
@@ -141,8 +146,14 @@ $distance-between-tile-border-and-text: 39px;
 
 .section-restaurants__restaurant-grid {
     display: grid;
+    column-gap: 18px;
+    row-gap: 18px;
     grid-template-columns: 1fr;
     margin-top: 28px;
+
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
@@ -158,10 +169,6 @@ $heart-margin: 14px;
     &:hover {
         transform: scale(1.01);
         @include box-shadow($hovered: true);
-    }
-
-    &:not(:first-child) {
-        margin-top: 18px;
     }
 
     .heart-button {
@@ -227,6 +234,10 @@ $heart-margin: 14px;
 
     &-4 {
         @include background-le-delice-des-sens;
+    }
+
+    @media only screen and (min-width: 768px) {
+        height: 261px;
     }
 }
 

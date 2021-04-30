@@ -1,0 +1,98 @@
+$loading-time: 3s;
+$ring-size: 250px;
+$ring-color: $color-tertiary;
+$ring-thickness: 8px;
+$logo-grow-duration: 600ms;
+$logo-size: 29px;
+$logo-color: $color-dark-gray;
+
+@keyframes appear {
+    from {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+}
+
+@keyframes rotate {
+    from {
+        transform: translateY(-50%) rotate(0turn);
+    }
+    to {
+        transform: translateY(-50%) rotate(1turn);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1.0);
+    }
+    to {
+        transform: scale(1.06);
+    }
+}
+
+.loading-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+
+    width: 0;
+    height: 0;
+    animation: appear $loading-time linear;
+
+    .loading-background__loading-spinner {
+        position: absolute;
+        width: $ring-size;
+        height: $ring-size;
+        border: $ring-thickness solid;
+        border-radius: 50%;
+        border-color: $ring-color transparent $ring-color transparent;
+        top: 50%;
+        transform: translateY(-50%);
+    
+        animation: rotate $loading-time infinite linear;
+    }
+
+    .loading-background__logo {
+        font-family: Shrikhand;
+        font-size: $logo-size;
+        color: $logo-color;
+
+        animation: grow $logo-grow-duration infinite alternate ease;
+    }
+}
+
+/* Reduce the size of every element in the page and position it at the top left corner to make sure there isn't a scrollbar
+during the loading of the page */
+
+@keyframes disappear {
+    0% {
+        position: absolute;
+        max-height: 0px;
+    }
+    100% {
+        position: absolute;
+        max-height: 0px;
+    }
+};
+
+.homepage * :not(.heart-button) {
+    animation: disappear $loading-time;
+}

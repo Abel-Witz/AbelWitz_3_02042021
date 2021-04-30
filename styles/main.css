@@ -9,21 +9,14 @@ body {
   /* Prevent iphone from zooming the fonts in landscape orientation */
 }
 
-main {
+.limited-width-content {
   max-width: 1440px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 
 @keyframes appear {
-  from {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-  to {
+  from, to {
+    opacity: 1;
     width: 100%;
     height: 100%;
     left: 0;
@@ -56,6 +49,7 @@ main {
   position: fixed;
   z-index: 2;
   background-color: white;
+  opacity: 0;
   width: 0;
   height: 0;
   animation: appear 3s linear;
@@ -267,9 +261,6 @@ footer .footer__content {
   position: relative;
   padding-left: 12px;
 }
-.section-functioning__step:last-child .section-functioning__step-tile {
-  background-color: #f4eefc;
-}
 
 .section-functioning__step-number {
   display: flex;
@@ -290,13 +281,18 @@ footer .footer__content {
 .section-functioning__step-tile {
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
   font-size: medium;
   width: 100%;
   height: 72px;
   padding-right: 10px;
   border-radius: 18px;
+  transition: all 100ms;
+  background-color: #f6f6f6;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.section-functioning__step-tile:hover {
+  background-color: #f4eefc;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-functioning__step-icon-1 {
@@ -509,6 +505,8 @@ footer .footer__content {
 }
 .restaurant-menu .restaurant-menu__title {
   display: flex;
+  max-width: 472px;
+  margin: 0 auto;
   align-items: center;
 }
 .restaurant-menu .restaurant-menu__title h2 {

@@ -2,20 +2,14 @@ $loading-time: 3s;
 $ring-size: 250px;
 $ring-color: $color-tertiary;
 $ring-thickness: 8px;
+$ring-rotation-speed: 3s;
 $logo-grow-duration: 600ms;
 $logo-size: 29px;
 $logo-color: $color-dark-gray;
 
 @keyframes appear {
-    from {
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-    }
-    to {
+    from, to {
+        opacity: 1;
         width: 100%;
         height: 100%;
         left: 0;
@@ -52,6 +46,7 @@ $logo-color: $color-dark-gray;
     position: fixed;
     z-index: 2;
     background-color: white;
+    opacity: 0;
 
     width: 0;
     height: 0;
@@ -67,7 +62,7 @@ $logo-color: $color-dark-gray;
         top: 50%;
         transform: translateY(-50%);
     
-        animation: rotate $loading-time infinite linear;
+        animation: rotate $ring-rotation-speed infinite linear;
     }
 
     .loading-background__logo {

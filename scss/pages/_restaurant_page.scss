@@ -62,6 +62,8 @@
 
     .restaurant-menu__title {
         display: flex;
+        max-width: 472px;
+        margin: 0 auto;
         align-items: center;
 
         h2 {

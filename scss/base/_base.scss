@@ -6,7 +6,7 @@ body {
     -webkit-text-size-adjust: 100%; /* Prevent iphone from zooming the fonts in landscape orientation */
 }
 
-main {
+.limited-width-content {
     max-width: 1440px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
 }

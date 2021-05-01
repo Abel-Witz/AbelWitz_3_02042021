@@ -54,7 +54,7 @@ body {
   height: 0;
   animation: appear 3s linear;
 }
-.loading-background .loading-background__loading-spinner {
+.loading-background__loading-spinner {
   position: absolute;
   width: 250px;
   height: 250px;
@@ -65,7 +65,7 @@ body {
   transform: translateY(-50%);
   animation: rotate 3s infinite linear;
 }
-.loading-background .loading-background__logo {
+.loading-background__logo {
   font-family: Shrikhand;
   font-size: 29px;
   color: #353535;
@@ -75,11 +75,7 @@ body {
 /* Reduce the size of every element in the page and position it at the top left corner to make sure there isn't a scrollbar
 during the loading of the page */
 @keyframes disappear {
-  0% {
-    position: absolute;
-    max-height: 0px;
-  }
-  100% {
+  from, to {
     position: absolute;
     max-height: 0px;
   }
@@ -129,7 +125,7 @@ during the loading of the page */
   animation: heart-fill 500ms forwards ease-in;
 }
 
-header {
+.header {
   display: flex;
   height: 63px;
   justify-content: center;
@@ -138,11 +134,11 @@ header {
   position: relative;
   z-index: 1;
 }
-header img {
+.header img {
   width: 167px;
   height: 29px;
 }
-header .header__return-button {
+.header__return-button {
   width: 18px;
   height: 16px;
   padding: 10px;
@@ -151,46 +147,42 @@ header .header__return-button {
   filter: invert(20%) sepia(0%) saturate(1%) hue-rotate(42deg) brightness(94%) contrast(92%);
   /* Similar to $color-dark-gray */
 }
-header .header__return-button img {
+.header__return-button img {
   width: 100%;
   height: 100%;
 }
 
-footer {
+.footer {
   padding-left: 25px;
   padding-top: 37px;
   padding-bottom: 37px;
   background: #353535;
 }
-footer a {
+.footer a {
   display: block;
   margin-bottom: 0.5em;
   text-decoration: none;
   color: #fff;
   font-weight: 400;
 }
-footer .footer__content {
+.footer__content {
   max-width: 1440px;
   margin: 0 auto 0 auto;
 }
-
 .footer__ohmyfood-logo {
   width: 98px;
   height: 18px;
   margin-bottom: 20px;
   filter: invert(1);
 }
-
-.footer__partnering-icon, .footer__suggest-icon {
+.footer .footer__partnering-icon, .footer .footer__suggest-icon {
   height: 1em;
   filter: invert(1);
 }
-
 .footer__suggest-icon {
   width: 11px;
   margin-right: 12px;
 }
-
 .footer__partnering-icon {
   width: 12px;
   margin-right: 11px;
@@ -204,7 +196,6 @@ footer .footer__content {
   background: #eaeaea;
   color: #353535;
 }
-
 .location-display__map-marker-icon {
   width: 12px;
   height: 1em;
@@ -219,20 +210,18 @@ footer .footer__content {
   padding-bottom: 57px;
   text-align: center;
 }
-.discover-restaurants .button {
-  margin: 0 auto;
-}
-
 .discover-restaurants__title {
   margin: 0;
   font-size: x-large;
 }
-
 .discover-restaurants__paragraph {
   font-weight: 200;
   color: #4d4d4d;
   margin-top: 25px;
   margin-bottom: 31px;
+}
+.discover-restaurants .button {
+  margin: 0 auto;
 }
 
 .section-functioning {
@@ -240,10 +229,9 @@ footer .footer__content {
   margin-right: 17px;
   padding: 52px 3px 68px 3px;
 }
-.section-functioning .section-functioning__title {
+.section-functioning__title {
   margin: 0;
 }
-
 .section-functioning__step-group {
   display: grid;
   grid-template-columns: 1fr;
@@ -256,12 +244,10 @@ footer .footer__content {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 .section-functioning__step {
   position: relative;
   padding-left: 12px;
 }
-
 .section-functioning__step-number {
   display: flex;
   position: absolute;
@@ -277,7 +263,6 @@ footer .footer__content {
   top: 50%;
   transform: translateY(-50%);
 }
-
 .section-functioning__step-tile {
   display: flex;
   align-items: center;
@@ -294,7 +279,6 @@ footer .footer__content {
   background-color: #f4eefc;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
-
 .section-functioning__step-icon-1 {
   width: 13px;
   height: 21px;
@@ -303,7 +287,6 @@ footer .footer__content {
   margin-left: 33px;
   margin-right: 26px;
 }
-
 .section-functioning__step-icon-2 {
   width: 17px;
   height: 16px;
@@ -312,7 +295,6 @@ footer .footer__content {
   margin-left: 33px;
   margin-right: 22px;
 }
-
 .section-functioning__step-icon-3 {
   width: 18px;
   height: 19px;
@@ -327,10 +309,9 @@ footer .footer__content {
   margin-right: 17px;
   padding: 52px 3px 63px 3px;
 }
-.section-restaurants .section-restaurants__title {
+.section-restaurants__title {
   margin: 0;
 }
-
 .section-restaurants__restaurant-grid {
   display: grid;
   column-gap: 18px;
@@ -343,7 +324,6 @@ footer .footer__content {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 .section-restaurants__restaurant {
   position: relative;
   border-radius: 10px;
@@ -369,16 +349,13 @@ footer .footer__content {
     border-radius: 0px 0px 10px 0px;
   }
 }
-
 .section-restaurants__restaurant-tile {
   text-decoration: none;
   color: #000;
 }
-
 .section-restaurants__restaurant-tile-content {
   padding-bottom: 19px;
 }
-
 .section-restaurants__restaurant-tile-image {
   width: 100%;
   height: 174px;
@@ -420,13 +397,11 @@ footer .footer__content {
     height: 261px;
   }
 }
-
 .section-restaurants__restaurant-tile-title {
   font-size: medium;
   font-weight: 800;
   margin: 19px 24px 7px 14px;
 }
-
 .section-restaurants__restaurant-tile-paragraph {
   font-weight: 200;
   margin-top: 0px;
@@ -439,6 +414,7 @@ footer .footer__content {
   height: 220px;
   background-size: cover;
   background-position: center;
+  /* Generate the media queries in order to adapt the presentation image height */
 }
 .presentation-image-a-la-francaise {
   background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/a_la_francaise.jpg");
@@ -503,13 +479,13 @@ footer .footer__content {
   border-radius: 38px 38px 0px 0px;
   background-color: #f6f6f6;
 }
-.restaurant-menu .restaurant-menu__title {
+.restaurant-menu__title {
   display: flex;
   max-width: 472px;
   margin: 0 auto;
   align-items: center;
 }
-.restaurant-menu .restaurant-menu__title h2 {
+.restaurant-menu__title h2 {
   height: initial;
   margin: 0px auto 0px 19px;
   font-family: Shrikhand;
@@ -518,33 +494,34 @@ footer .footer__content {
   white-space: nowrap;
 }
 @media only screen and (max-width: 340px) {
-  .restaurant-menu .restaurant-menu__title h2 {
+  .restaurant-menu__title h2 {
     /* Lowers font size to make sure it fully appears on smaller screens */
     font-size: 23px;
   }
 }
-.restaurant-menu .restaurant-menu__title .spacer {
+.restaurant-menu__title .spacer {
   max-width: 38px;
   width: 100%;
 }
-.restaurant-menu .restaurant-menu__category {
+.restaurant-menu__category {
   margin: 0 auto;
   max-width: 472px;
 }
-.restaurant-menu .restaurant-menu__category-title {
+.restaurant-menu__category-title {
+  display: inline-block;
   width: fit-content;
-  margin: 38px 0px 23px 20px;
+  margin: 40px 0px 8px 20px;
   font-weight: 200;
   font-size: medium;
   position: relative;
 }
 @media only screen and (min-width: 500px) {
-  .restaurant-menu .restaurant-menu__category-title {
+  .restaurant-menu__category-title {
     margin-left: 50%;
     transform: translateX(-50%);
   }
 }
-.restaurant-menu .restaurant-menu__category-title::after {
+.restaurant-menu__category-title::after {
   content: "";
   display: block;
   width: 40px;
@@ -553,16 +530,16 @@ footer .footer__content {
   bottom: -8px;
   background-color: #99E2D0;
 }
-.restaurant-menu .restaurant-menu__choice-group {
+.restaurant-menu__choice-group {
   display: flex;
   flex-direction: column;
-  margin: 15px 14px 47px 14px;
+  margin: 15px 14px 0px 14px;
 }
-.restaurant-menu .restaurant-menu__choice-link {
+.restaurant-menu__choice-link {
   color: #000;
   text-decoration: none;
 }
-.restaurant-menu .restaurant-menu__choice {
+.restaurant-menu__choice {
   display: flex;
   position: relative;
   overflow: hidden;
@@ -572,92 +549,88 @@ footer .footer__content {
   padding-right: 0px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
 }
-.restaurant-menu .restaurant-menu__choice:hover {
+.restaurant-menu__choice:hover {
   padding-right: 59px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
-.restaurant-menu .restaurant-menu__choice:hover .tick-mark {
+.restaurant-menu__choice:hover .restaurant-menu__tick-mark {
   min-width: 59px;
 }
-.restaurant-menu .restaurant-menu__choice:hover .tick-mark__icon {
+.restaurant-menu__choice:hover .restaurant-menu__tick-mark-icon {
   transform: translateY(-50%) rotate(1turn);
 }
-.restaurant-menu .restaurant-menu__choice-1 {
+.restaurant-menu__choice-1 {
   animation: tile-appear 500ms 0ms backwards ease-in-out;
 }
-.restaurant-menu .restaurant-menu__choice-2 {
+.restaurant-menu__choice-2 {
   animation: tile-appear 500ms 200ms backwards ease-in-out;
 }
-.restaurant-menu .restaurant-menu__choice-3 {
+.restaurant-menu__choice-3 {
   animation: tile-appear 500ms 400ms backwards ease-in-out;
 }
-.restaurant-menu .restaurant-menu__choice-4 {
+.restaurant-menu__choice-4 {
   animation: tile-appear 500ms 600ms backwards ease-in-out;
 }
-.restaurant-menu .restaurant-menu__choice:not(:first-child) {
+.restaurant-menu__choice:not(:first-child) {
   margin-top: 16px;
 }
-.restaurant-menu .restaurant-menu__choice-content {
+.restaurant-menu__choice-content {
   width: 100%;
   padding: 10px 0px 10px 10px;
 }
-.restaurant-menu .restaurant-menu__choice-title {
+.restaurant-menu__choice-title {
   width: fit-content;
   margin: 0px 0px 10px 0px;
   font-size: medium;
   font-weight: 800;
 }
-@media only screen and (max-width: 375px) {
-  .restaurant-menu .restaurant-menu__choice-title {
+@media only screen and (max-width: 390px) {
+  .restaurant-menu__choice-title {
     /* Lowers font size to make sure it fully appears on smaller screens */
     font-size: small;
   }
 }
-.restaurant-menu .restaurant-menu__choice-subtitle {
+.restaurant-menu__choice-subtitle {
   font-weight: 400;
   display: flex;
   justify-content: space-between;
 }
-.restaurant-menu .restaurant-menu__choice-subtitle-text {
+.restaurant-menu__choice-subtitle-text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media only screen and (min-width: 309px) and (max-width: 375px) {
-  .restaurant-menu .restaurant-menu__choice-subtitle-text {
+@media only screen and (min-width: 309px) and (max-width: 390px) {
+  .restaurant-menu__choice-subtitle-text {
     /* Lowers font size to make sure it fully appears on smaller screens */
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 308px) {
-  .restaurant-menu .restaurant-menu__choice-subtitle-text {
+  .restaurant-menu__choice-subtitle-text {
     /* Lowers font size to make sure it fully appears on smaller screens */
     font-size: 10px;
   }
 }
-.restaurant-menu .restaurant-menu__choice-subtitle-price {
+.restaurant-menu__choice-subtitle-price {
   margin-left: 10px;
   margin-right: 23px;
   font-weight: 800;
   position: relative;
 }
-@media only screen and (min-width: 309px) and (max-width: 375px) {
-  .restaurant-menu .restaurant-menu__choice-subtitle-price {
+@media only screen and (min-width: 309px) and (max-width: 390px) {
+  .restaurant-menu__choice-subtitle-price {
     /* Lowers font size to make sure it fully appears on smaller screens */
     font-size: 13px;
   }
 }
 @media only screen and (max-width: 308px) {
-  .restaurant-menu .restaurant-menu__choice-subtitle-price {
+  .restaurant-menu__choice-subtitle-price {
     /* Lowers font size to make sure it fully appears on smaller screens */
     font-size: 11px;
   }
 }
-.restaurant-menu .button {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-.restaurant-menu .tick-mark {
+.restaurant-menu__tick-mark {
   min-width: 0px;
   height: 100%;
   position: absolute;
@@ -665,7 +638,7 @@ footer .footer__content {
   background-color: #99E2D0;
   transition: min-width 500ms ease-in-out;
 }
-.restaurant-menu .tick-mark__icon {
+.restaurant-menu__tick-mark-icon {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -674,6 +647,11 @@ footer .footer__content {
   filter: invert(1);
   transform: translateY(-50%) rotate(0deg);
   transition: transform 550ms ease-out;
+}
+.restaurant-menu .button {
+  margin-top: 47px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=main.css.map */

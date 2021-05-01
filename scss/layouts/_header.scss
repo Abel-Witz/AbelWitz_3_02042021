@@ -1,4 +1,4 @@
-header {
+.header {
     display: flex;
     height: 63px;
     justify-content: center;
@@ -12,7 +12,7 @@ header {
         height: 29px;
     }
 
-    .header__return-button {
+    &__return-button {
         width: 18px;
         height: 16px;
         padding: 10px;

@@ -1,4 +1,4 @@
-footer {
+.footer {
     padding-left: 25px;
     padding-top: 37px;
     padding-bottom: 37px;
@@ -12,32 +12,32 @@ footer {
         font-weight: $font-weight-medium;
     }
 
-    .footer__content {
+    &__content {
         max-width: 1440px;
         margin: 0 auto 0 auto;
     }
-}
 
-.footer__ohmyfood-logo {
-    width: 98px;
-    height: 18px;
-    margin-bottom: 20px;
-    filter: invert(1);
-}
+    &__ohmyfood-logo {
+        width: 98px;
+        height: 18px;
+        margin-bottom: 20px;
+        filter: invert(1);
+    }
 
-%footer-icon {
-    height: 1em;
-    filter: invert(1);
-}
+    %footer-icon {
+        height: 1em;
+        filter: invert(1);
+    }
 
-.footer__suggest-icon {
-    width: 11px;
-    margin-right: 12px;
-    @extend %footer-icon;
-}
+    &__suggest-icon {
+        width: 11px;
+        margin-right: 12px;
+        @extend %footer-icon;
+    }
 
-.footer__partnering-icon {
-    width: 12px;
-    margin-right: 11px;
-    @extend %footer-icon;
+    &__partnering-icon {
+        width: 12px;
+        margin-right: 11px;
+        @extend %footer-icon;
+    }
 }

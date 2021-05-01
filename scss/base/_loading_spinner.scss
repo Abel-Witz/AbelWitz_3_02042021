@@ -52,7 +52,7 @@ $logo-color: $color-dark-gray;
     height: 0;
     animation: appear $loading-time linear;
 
-    .loading-background__loading-spinner {
+    &__loading-spinner {
         position: absolute;
         width: $ring-size;
         height: $ring-size;
@@ -65,7 +65,7 @@ $logo-color: $color-dark-gray;
         animation: rotate $ring-rotation-speed infinite linear;
     }
 
-    .loading-background__logo {
+    &__logo {
         font-family: Shrikhand;
         font-size: $logo-size;
         color: $logo-color;
@@ -78,11 +78,7 @@ $logo-color: $color-dark-gray;
 during the loading of the page */
 
 @keyframes disappear {
-    0% {
-        position: absolute;
-        max-height: 0px;
-    }
-    100% {
+    from, to {
         position: absolute;
         max-height: 0px;
     }

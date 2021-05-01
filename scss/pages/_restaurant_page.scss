@@ -20,6 +20,8 @@
         @include background-la-palette-du-gout;
     }
 
+
+    /* Generate the media queries in order to adapt the presentation image height */
     $iterations: 6;
 
     @for $i from 1 through $iterations {
@@ -38,6 +40,7 @@
         };
     };
 }
+
 
 @keyframes tile-appear {
     from {
@@ -60,7 +63,7 @@
     border-radius: 38px 38px 0px 0px;
     background-color: $color-light-gray;
 
-    .restaurant-menu__title {
+    &__title {
         display: flex;
         max-width: 472px;
         margin: 0 auto;
@@ -85,14 +88,15 @@
         }
     }
 
-    .restaurant-menu__category {
+    &__category {
         margin: 0 auto;
         max-width: 472px;
     }
 
-    .restaurant-menu__category-title {
+    &__category-title {
+        display: inline-block;
         width: fit-content;
-        margin: 38px 0px 23px 20px;
+        margin: 40px 0px 8px 20px;
         font-weight: $font-weight-medium / 2;
         font-size: medium;
         position: relative;
@@ -103,7 +107,7 @@
         }
     }
         
-    .restaurant-menu__category-title::after {
+    &__category-title::after {
         content: "";
         display: block;
         width: 40px;
@@ -113,18 +117,18 @@
         background-color: $color-tertiary;
     }
 
-    .restaurant-menu__choice-group {
+    &__choice-group {
         display: flex;
         flex-direction: column;
-        margin: 15px 14px 47px 14px;
+        margin: 15px 14px 0px 14px;
     }
 
-    .restaurant-menu__choice-link {
+    &__choice-link {
         color: #000;
         text-decoration: none;
     }
 
-    .restaurant-menu__choice {
+    &__choice {
         display: flex;
         position: relative;
         overflow: hidden;
@@ -140,11 +144,11 @@
             @include box-shadow($hovered: true);
         }
 
-        &:hover .tick-mark {
+        &:hover .restaurant-menu__tick-mark {
             min-width: 59px;
         }
 
-        &:hover .tick-mark__icon {
+        &:hover .restaurant-menu__tick-mark-icon {
             transform: translateY(-50%) rotate(1turn);
         }
 
@@ -159,34 +163,34 @@
         }
     }
 
-    .restaurant-menu__choice-content {
+    &__choice-content {
         width: 100%;
         padding: 10px 0px 10px 10px;
     }
 
-    .restaurant-menu__choice-title {
+    &__choice-title {
         width: fit-content;
         margin: 0px 0px 10px 0px;
         font-size: medium;
         font-weight: $font-weight-medium * 2;
 
-        @media only screen and (max-width: 375px) { /* Lowers font size to make sure it fully appears on smaller screens */
+        @media only screen and (max-width: 390px) { /* Lowers font size to make sure it fully appears on smaller screens */
             font-size: small;
         }
     }
 
-    .restaurant-menu__choice-subtitle {
+    &__choice-subtitle {
         font-weight: $font-weight-medium;
         display: flex;
         justify-content: space-between;
     }
 
-    .restaurant-menu__choice-subtitle-text {
+    &__choice-subtitle-text {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
 
-        @media only screen and (min-width: 309px) and (max-width: 375px) { /* Lowers font size to make sure it fully appears on smaller screens */
+        @media only screen and (min-width: 309px) and (max-width: 390px) { /* Lowers font size to make sure it fully appears on smaller screens */
             font-size: 12px;
         }
 
@@ -195,13 +199,13 @@
         }
     }
 
-    .restaurant-menu__choice-subtitle-price {
+    &__choice-subtitle-price {
         margin-left: 10px;
         margin-right: 23px;
         font-weight: $font-weight-medium * 2;
         position: relative;
 
-        @media only screen and (min-width: 309px) and (max-width: 375px) { /* Lowers font size to make sure it fully appears on smaller screens */
+        @media only screen and (min-width: 309px) and (max-width: 390px) { /* Lowers font size to make sure it fully appears on smaller screens */
             font-size: 13px;
         }
 
@@ -210,12 +214,7 @@
         }
     }
 
-    .button {
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .tick-mark {
+    &__tick-mark {
         min-width: 0px;
         height: 100%;
         position: absolute;
@@ -224,7 +223,7 @@
         transition: min-width 500ms ease-in-out;
     }
 
-    .tick-mark__icon {
+    &__tick-mark-icon {
         width: 20px;
         height: 20px;
         position: absolute;
@@ -233,5 +232,11 @@
         filter: invert(1);
         transform: translateY(-50%) rotate(0deg);
         transition: transform 550ms ease-out;
+    }
+
+    .button {
+        margin-top: 47px;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 }

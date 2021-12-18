@@ -381,16 +381,16 @@ during the loading of the page */
   box-shadow: 0px 0px 1px #99E2D0;
 }
 .section-restaurants__restaurant-tile-image-1 {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_palette_du_gout.jpg");
+  background-image: url("../images/restaurants/la_palette_du_gout.jpg");
 }
 .section-restaurants__restaurant-tile-image-2 {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_note_enchantee.jpg");
+  background-image: url("../images/restaurants/la_note_enchantee.jpg");
 }
 .section-restaurants__restaurant-tile-image-3 {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/a_la_francaise.jpg");
+  background-image: url("../images/restaurants/a_la_francaise.jpg");
 }
 .section-restaurants__restaurant-tile-image-4 {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/le_delice_des_sens.jpg");
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 @media only screen and (min-width: 768px) {
   .section-restaurants__restaurant-tile-image {
@@ -417,16 +417,16 @@ during the loading of the page */
   /* Generate the media queries in order to adapt the presentation image height */
 }
 .presentation-image-a-la-francaise {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/a_la_francaise.jpg");
+  background-image: url("../images/restaurants/a_la_francaise.jpg");
 }
 .presentation-image-la-note-enchantee {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_note_enchantee.jpg");
+  background-image: url("../images/restaurants/la_note_enchantee.jpg");
 }
 .presentation-image-le-delice-des-sens {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/le_delice_des_sens.jpg");
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 .presentation-image-la-palette-du-gout {
-  background-image: url("https://john1344.github.io/AbelWitz_3_02042021/images/restaurants/la_palette_du_gout.jpg");
+  background-image: url("../images/restaurants/la_palette_du_gout.jpg");
 }
 @media only screen and (min-width: 450px) and (max-width: 574px) {
   .presentation-image {
